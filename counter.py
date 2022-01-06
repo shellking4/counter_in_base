@@ -3,15 +3,15 @@
 import sys
 
 
-def encode(num, allowed_characters):
+def encode(num,  allowed_characters):
     if num == 0:
         return allowed_characters[0]
     arr = []
     arr_append = arr.append 
-    divmod = divmod 
+    _divmod = divmod 
     base = len(allowed_characters)
     while num:
-        num, rem = divmod(num, base)
+        num, rem = _divmod(num, base)
         arr_append(allowed_characters[rem])
     arr.reverse()
     return ''.join(arr)
