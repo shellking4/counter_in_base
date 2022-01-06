@@ -8,10 +8,10 @@ def encode(num, allowed_characters):
         return allowed_characters[0]
     arr = []
     arr_append = arr.append 
-    _divmod = divmod 
+    divmod = divmod 
     base = len(allowed_characters)
     while num:
-        num, rem = _divmod(num, base)
+        num, rem = divmod(num, base)
         arr_append(allowed_characters[rem])
     arr.reverse()
     return ''.join(arr)
