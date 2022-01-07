@@ -184,7 +184,7 @@ def count_for_base(base_number, pos_number):
         if (base_number == 51):
             string = f'{encode(i, ALLOWED_CHARACTERS_IN_BASE["fifty_one"])}'
         if (base_number == 52):
-            string = f'{encode(i, ALLOWED_CHARACTERS_IN_BASE["fifity_two"])}'
+            string = f'{encode(i, ALLOWED_CHARACTERS_IN_BASE["fifty_two"])}'
         if (base_number == 53):
             string = f'{encode(i, ALLOWED_CHARACTERS_IN_BASE["fifty_three"])}'
         if (base_number == 54):
@@ -219,11 +219,8 @@ def interact():
     args = sys.argv[1:]
     get = False
     if len(args) == 0:
-        # Pas d'argument en ligne de commande, on recupère
         base_number = input("The base: ")
         positions_number = input("Number of positions: ")
-
-        # Conversion en entier
         try:
             base_number = int(base_number)
             positions_number = int(positions_number)
@@ -231,7 +228,6 @@ def interact():
         except:
             print("Please, give integers as arguments")
     elif len(args) == 2:
-        # Presence de deux argument en ligne de commande, conversion en entier
         try:
             base_number = int(args[0])
             positions_number = int(args[1])
@@ -239,12 +235,9 @@ def interact():
         except:
             print("Please, give integers as arguments")
     else:
-        # Présence d'un nombre incorrect d'arguments
         print("Program needs 2 arguments")
-    # Bien récuperés
     if get:
         if 2 <= base_number and base_number <= 64:
-            # On affiche les nombres
             count_for_base(base_number, positions_number)
         else:
             print("Please, give a base between 2 and 64.")
