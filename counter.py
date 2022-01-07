@@ -215,7 +215,7 @@ def count_for_base(base_number, pos_number):
                 string = f'0{string}'
         print(string)
 
-def interact():
+def proceed():
     args = sys.argv[1:]
     get = False
     if len(args) == 0:
@@ -241,4 +241,4 @@ def interact():
             count_for_base(base_number, positions_number)
         else:
             print("Please, give a base between 2 and 64.")
-interact()
+proceed()
