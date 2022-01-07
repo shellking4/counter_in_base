@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+
 ALLOWED_CHARACTERS_IN_BASE = {
     "two": "01",
     "three": "012",
